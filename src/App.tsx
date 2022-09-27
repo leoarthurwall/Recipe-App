@@ -9,10 +9,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <form >
-        <input type="text" />
-        <button type="submit">Go</button>
-      </form>
+      >
     </div>
   );
 };
