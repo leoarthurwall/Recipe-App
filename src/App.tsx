@@ -16,7 +16,7 @@ const App: React.FC = () => {
   const getRecipes = async () => {
     const response = await fetch(apiRequest);
     const data = await response.json();
-    console.log(data)
+    console.log(data.hits[10].recipe.dishType[0])
   }
 
 
