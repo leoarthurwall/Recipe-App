@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Recipe from "./components/Recipe";
 
 const App: React.FC = () => {
   const [ingredient, setIngredient] = useState<string>("");
+  const [recipes, setRecipes] = useState([])
 
   const API_KEY = process.env.REACT_APP_RECIPE_API_KEY
   const API_ID = process.env.REACT_APP_RECIPE_API_ID
@@ -16,7 +18,7 @@ const App: React.FC = () => {
   const getRecipes = async () => {
     const response = await fetch(apiRequest);
     const data = await response.json();
-    console.log(data.hits[10].recipe.dishType[0])
+    setRecipes(data.hits)
   }
 
 
@@ -38,6 +40,7 @@ const App: React.FC = () => {
         <input type="submit" value="Search"></input>
       </form>
       <h3>{ingredient}</h3>
+      <Recipe />
     </div>
   );
 };
