@@ -39,7 +39,6 @@ const App: React.FC = () => {
     const data = await response.json();
     setRecipesfound(data.hits);
     console.log(data.hits);
-    console.log(data.hits.recipe.ingredientLines.length);
   };
   
 
@@ -53,8 +52,8 @@ const App: React.FC = () => {
         <input type="submit" value="Search"></input>
       </form>
       {query && <p>Results for {query}...</p>}
-      {recipesFound.map((recipe) => (
-        <Recipe />
+      {recipesFound.map(recipe => (
+        <Recipe key={recipe.label} recipe={recipe} />
       ))}
     </div>
   );
