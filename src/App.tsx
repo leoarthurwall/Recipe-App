@@ -13,14 +13,12 @@ const App: React.FC = () => {
 
   const apiRequest = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}`;
 
-  
-  
   // saves written input to writtenIngredient state
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value);
     setWrittenIngredient(event.target.value);
   };
-  
+
   // when form is submitted, the query state is updated with the writtenIngredient state
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -40,7 +38,6 @@ const App: React.FC = () => {
     setRecipesfound(data.hits);
     console.log(data.hits);
   };
-  
 
   return (
     <div className="App">
@@ -52,9 +49,14 @@ const App: React.FC = () => {
         <input type="submit" value="Search"></input>
       </form>
       {query && <p>Results for {query}...</p>}
-      {recipesFound.map(recipe => (
-        <Recipe key={recipe.label} recipe={recipe} />
-      ))}
+      {recipesFound &&
+        recipesFound.map((recipe) => (
+          <>
+            <p>{recipe.label}</p>
+            <p>hello</p>
+          </>
+          // <Recipe key={recipe.calories} recipe={recipe}></Recipe>
+        ))}
     </div>
   );
 };
