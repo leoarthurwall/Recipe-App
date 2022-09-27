@@ -36,7 +36,7 @@ const App: React.FC = () => {
     const response = await fetch(apiRequest);
     const data = await response.json();
     setRecipesfound(data.hits);
-    console.log(data.hits);
+    console.log(recipesFound);
   };
 
   return (
