@@ -6,7 +6,7 @@ const App: React.FC = () => {
   const [submitIngredient, setSubmitIngredient] = useState<string>("");
   const [writtenIngredient, setWrittenIngredient] = useState<string>("");
   const [recipesFound, setRecipesfound] = useState([]);
-  const [query, setQuery] = useState("mushroom");
+  const [query, setQuery] = useState<string>("mushroom");
 
   const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
   const API_ID = process.env.REACT_APP_RECIPE_API_ID;
@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     getRecipes();
-  }, []);
+  }, [query]);
 
   const getRecipes = async (): Promise<any> => {
     const response = await fetch(apiRequest);
@@ -26,9 +26,9 @@ const App: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(event.target);
-    // setSubmitIngredient(e.target.value);
-    // console.log(ingredient);
+    setQuery(writtenIngredient);
+    console.log(query)
+    
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
