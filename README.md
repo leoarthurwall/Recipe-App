@@ -18,7 +18,7 @@
 **Plan**
 
 SEARCH COMPONENT
-- add an input field and button to jsx, wrap inside form
+- add an input field and button to jsx, wrap inside form DONE
 - add an onChange handler to record the input value and store it in state as a string
 - create an onSubmit handler to captures the onChange saved state & resets the onchange state back to ""
 
