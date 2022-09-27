@@ -1,8 +1,14 @@
+import { IRecipe } from '../model'
 
-const Recipe = () => {
+interface Props {
+    recipesFound: IRecipe[]
+}
+
+
+const Recipe:React.FC<Props>  = ({recipesFound}) => {
   return (
     <div>
-        <h1>Title</h1>
+        <h1>Hi</h1>
         <p>Text</p>
         <img src="" alt="" />
 

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Recipe from "./components/Recipe";
+import { IRecipe } from "./model";
 
 const App: React.FC = () => {
   // const [ingredient, setIngredient] = useState<string>("");
-  const [recipesFound, setRecipesfound] = useState([]);
+  const [recipesFound, setRecipesfound] = useState<IRecipe[]>([]);
 
   const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
   const API_ID = process.env.REACT_APP_RECIPE_API_ID;
@@ -22,6 +23,7 @@ const App: React.FC = () => {
     console.log(data.hits);
   };
 
+  
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   //   e.preventDefault()
   //   setIngredient(e.target.value);
@@ -39,7 +41,12 @@ const App: React.FC = () => {
         <input type="submit" value="Search"></input>
       </form>
       {recipesFound.map((recipe) => (
-        <Recipe />
+        <Recipe 
+        key={recipe.recipe.label}
+        title={recipe.recipe.label}
+        calories={recipe.recipe.calories}
+        image={recipe.recipe.image}
+        />
       ))}
     </div>
   );
