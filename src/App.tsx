@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Recipe from "./components/Recipe";
+import { IRecipe } from "./IRecipe";
 
 const App: React.FC = () => {
-  const [submitIngredient, setSubmitIngredient] = useState<string>("");
   const [writtenIngredient, setWrittenIngredient] = useState<string>("");
-  const [recipesFound, setRecipesfound] = useState([]);
+  const [recipesFound, setRecipesfound] = useState<IRecipe[]>([]);
   const [query, setQuery] = useState<string>("mushroom");
 
   const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
@@ -22,18 +22,18 @@ const App: React.FC = () => {
     const data = await response.json();
     setRecipesfound(data.hits);
     console.log(data.hits);
+    console.log(data.hits.recipe.ingredientLines.length);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setQuery(writtenIngredient);
-    console.log(query)
-    
+    console.log(query);
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value);
-    setWrittenIngredient(event.target.value)
+    setWrittenIngredient(event.target.value);
   };
 
   return (
