@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Recipe from "./components/Recipe";
-import { IRecipe } from "./model";
 
 const App: React.FC = () => {
   // const [ingredient, setIngredient] = useState<string>("");
-  const [recipesFound, setRecipesfound] = useState<IRecipe[]>([]);
+  const [recipesFound, setRecipesfound] = useState([]);
+  const [query, setQuery] = useState('mushroom')
 
   const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
   const API_ID = process.env.REACT_APP_RECIPE_API_ID;
 
-  const apiRequest = `https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=${API_ID}&app_key=${API_KEY}`;
+  const apiRequest = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}`;
 
   useEffect(() => {
-    getRecipes();
+    getRecipes(query);
   }, []);
 
-  const getRecipes = async (): Promise<any> => {
+  const getRecipes = async (query: string): Promise<any> => {
     const response = await fetch(apiRequest);
     const data = await response.json();
     setRecipesfound(data.hits);
@@ -41,12 +41,7 @@ const App: React.FC = () => {
         <input type="submit" value="Search"></input>
       </form>
       {recipesFound.map((recipe) => (
-        <Recipe 
-        key={recipe.recipe.label}
-        title={recipe.recipe.label}
-        calories={recipe.recipe.calories}
-        image={recipe.recipe.image}
-        />
+        <Recipe />
       ))}
     </div>
   );

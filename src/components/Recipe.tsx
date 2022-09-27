@@ -1,19 +1,13 @@
-import { IRecipe } from '../model'
-
-interface Props {
-    recipesFound: IRecipe[]
-}
 
 
-const Recipe:React.FC<Props>  = ({recipesFound}) => {
+const Recipe = () => {
   return (
     <div>
-        <h1>Hi</h1>
-        <p>Text</p>
-        <img src="" alt="" />
-
+      <h1>Hello</h1>
+      <p>Text</p>
+      <img src="" alt="" />
     </div>
-  )
-}
+  );
+};
 
-export default Recipe
+export default Recipe;
