@@ -38,7 +38,7 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
           
           <div className="recipe-yield">
             <UserIcon className="yield-icon" />
-            <p className="yield-icon-text">{recipe.recipe.yield}</p>
+            <p className="yield-icon-text">Serves {recipe.recipe.yield}</p>
           </div>
         </div>
       </div>
