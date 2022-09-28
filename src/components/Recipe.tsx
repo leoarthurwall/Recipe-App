@@ -9,7 +9,7 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
   return (
     <div className="recipe-container">
       <div className="recipe-container-left">
-        <a href={recipe.recipe.url} target="blank">
+        <a className="recipe-link" href={recipe.recipe.url} target="blank">
           <img
             className="recipe-image"
             src={recipe.recipe.image}
@@ -17,12 +17,13 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
           ></img>
         </a>
       </div>
-      <div className="recipe-right">
+      <div className="recipe-container-right">
         <div className="recipe-right-upper">
-          <a href={recipe.recipe.url} target="blank">
+          <a className="recipe-link" href={recipe.recipe.url} target="blank">
             <h1 className="recipe-name">{recipe.recipe.label}</h1>
           </a>
-          <ul className="recipe-ingredient-list">
+          <h3 className="recipe-ingredient-header">Ingredients:</h3>
+          <ul className="recipe-ingredient-list"> 
             {recipe.recipe.ingredientLines.map((ingredient: string) => (
               <li className="recipe-ingredient-item">{ingredient}</li>
             ))}

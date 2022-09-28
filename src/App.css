@@ -1,16 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Prompt:wght@100;200;300;400;500;600;700&family=Roboto&display=swap");
+
 body{
   background-color: #F5F5F5;
   display: flex;
   justify-content: center;
+  font-family: "Roboto", sans-serif;
+
 }
 
 :root {
   --accent-color: #732AD8;
+  --font-text-color: #666
 }
 
 .App {
   height: 100%;
-  width: 700px;
+  width: 800px;
+
 }
 
 
