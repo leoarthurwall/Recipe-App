@@ -6,4 +6,5 @@ export interface IRecipe {
     ingredientLines: string
     totalTime: number
     yield: 5
+    url:string
 }

@@ -1,23 +1,27 @@
 import { IRecipe } from "../IRecipe";
+import "./Recipe.css";
 
 type Props = {
   recipe: IRecipe;
 };
 
 const Recipe: React.FC<Props> = ({ recipe }) => {
-  console.log(recipe.recipe.ingredientLines[0].split(", "));
   return (
     <div className="recipe-container">
       <div className="recipe-container-left">
-        <img
-          className="recipe-image"
-          src={recipe.recipe.image}
-          alt={recipe.recipe.label}
-        ></img>
+        <a href={recipe.recipe.url} target="blank">
+          <img
+            className="recipe-image"
+            src={recipe.recipe.image}
+            alt={recipe.recipe.label}
+          ></img>
+        </a>
       </div>
       <div className="recipe-right">
         <div className="recipe-right-upper">
-          <h1 className="recipe-name">{recipe.recipe.label}</h1>
+          <a href={recipe.recipe.url} target="blank">
+            <h1 className="recipe-name">{recipe.recipe.label}</h1>
+          </a>
           <ul className="recipe-ingredient-list">
             {recipe.recipe.ingredientLines.map((ingredient: string) => (
               <li className="recipe-ingredient-item">{ingredient}</li>
