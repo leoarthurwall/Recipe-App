@@ -27,7 +27,7 @@ const Input: React.FC<Props> = ({ writtenIngredient, handleSubmit, handleChange 
           className="input-box"
           onChange={handleChange}
           type="text"
-          placeholder="Enter ingredient"
+          placeholder="Enter an ingredient"
           autoFocus
           autoComplete="off"
           value={writtenIngredient}
