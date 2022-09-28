@@ -1,4 +1,6 @@
 import "./styles.css";
+import { MagnifyingGlassIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+
 
 type Props = {
   handleSubmit: any; //NEED UPDATING TO CORRECT TYPE
@@ -21,6 +23,8 @@ const Input: React.FC<Props> = ({ handleSubmit, handleChange }) => {
           placeholder="Enter ingredient"
           autoFocus
         ></input>
+        <ChevronRightIcon className="input-arrow"/>
+        <MagnifyingGlassIcon className="magnifying-glass-icon" />
 
         {/* <input className="input-button" type="submit" value="Search"></input> */}
       </form>
