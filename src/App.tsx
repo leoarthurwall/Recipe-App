@@ -7,7 +7,7 @@ import { IRecipe } from "./IRecipe";
 const App: React.FC = () => {
   const [writtenIngredient, setWrittenIngredient] = useState<string>("");
   const [recipesFound, setRecipesfound] = useState<IRecipe[]>([]);
-  const [query, setQuery] = useState<string>("mushroom");
+  const [query, setQuery] = useState<string>("pasta");
 
   const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
   const API_ID = process.env.REACT_APP_RECIPE_API_ID;
@@ -30,7 +30,7 @@ const App: React.FC = () => {
   //when the query is updated, the useEffect calls the getRecipes api call function
   useEffect(() => {
     getRecipes();
-  }, []);
+  }, [query]);
 
   // does an async/ await fetch request to the API, adds the data to the recipesFound[] state
   const getRecipes = async (): Promise<any> => {
