@@ -17,7 +17,7 @@ const Input: React.FC<Props> = ({ handleSubmit, handleChange }) => {
         <ShoppingCartIcon className="shopping-icon"/>
         <h3>Tell us what ingredients you need to use up</h3>
       </header>
-      <p>
+      <p className="input-para">
         Type an ingredient into the dropdown menu, and select a recipe you that
         takes your fancy.
       </p>
@@ -28,6 +28,7 @@ const Input: React.FC<Props> = ({ handleSubmit, handleChange }) => {
           type="text"
           placeholder="Enter ingredient"
           autoFocus
+          autoComplete="off"
         ></input>
         <ChevronRightIcon className="input-arrow" />
         <MagnifyingGlassIcon className="magnifying-glass-icon" />
