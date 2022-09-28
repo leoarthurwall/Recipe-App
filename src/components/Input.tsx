@@ -8,9 +8,10 @@ import {
 type Props = {
   handleSubmit: any; //NEED UPDATING TO CORRECT TYPE
   handleChange: any; //NEED UPDATING TO CORRECT TYPE
+  writtenIngredient: string
 };
 
-const Input: React.FC<Props> = ({ handleSubmit, handleChange }) => {
+const Input: React.FC<Props> = ({ writtenIngredient, handleSubmit, handleChange }) => {
   return (
     <div className="input-container">
       <header className="input-header">
@@ -29,6 +30,7 @@ const Input: React.FC<Props> = ({ handleSubmit, handleChange }) => {
           placeholder="Enter ingredient"
           autoFocus
           autoComplete="off"
+          value={writtenIngredient}
         ></input>
         <ChevronRightIcon className="input-arrow" />
         <MagnifyingGlassIcon className="magnifying-glass-icon" />
