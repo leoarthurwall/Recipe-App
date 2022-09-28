@@ -13,6 +13,19 @@ const App: React.FC = () => {
 
   const apiRequest = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}`;
   
+  // saves written input to writtenIngredient state
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.value);
+    setWrittenIngredient(event.target.value);
+  };
+  
+  // when form is submitted, the query state is updated with the writtenIngredient state
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setQuery(writtenIngredient);
+    console.log(query);
+  };
+  
   //when the query is updated, the useEffect calls the getRecipes api call function
   useEffect(() => {
     getRecipes();
@@ -26,20 +39,7 @@ const App: React.FC = () => {
     console.log("recipes.found", recipesFound);
     console.log("data.hits", data.hits)
   };
-  // saves written input to writtenIngredient state
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
-    setWrittenIngredient(event.target.value);
-  };
-
-  // when form is submitted, the query state is updated with the writtenIngredient state
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setQuery(writtenIngredient);
-    console.log(query);
-  };
-
-
+  
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
@@ -52,11 +52,7 @@ const App: React.FC = () => {
       {query && <p>Results for {query}...</p>}
       {recipesFound &&
         recipesFound.map((recipe, index)  => (
-          <div key={index}>
-            <p>{recipe.recipe.label}</p>
-            <p>hello</p>
-          </div>
-          // <Recipe key={recipe.calories} recipe={recipe}></Recipe>
+          <Recipe key={index} recipe={recipe}></Recipe>
         ))}
     </div>
   );

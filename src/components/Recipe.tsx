@@ -1,19 +1,14 @@
 import { IRecipe } from "../IRecipe";
 
-// type Props = {
-//    recipe: IRecipe
-//    key: string
-// }
+type Props = {
+   recipe: IRecipe
+}
 
-// const Recipe: React.FC<Props> = ({recipe, key}) => {
-
-const Recipe = (props: {recipe: IRecipe}) => {
-    const { recipe } = props
+const Recipe: React.FC<Props> = ({recipe}) => {
   return (
     <div>
-      <h1>{recipe.label}</h1>
-      <img src={recipe.image} alt={recipe.label} />
-      <p>Hello</p>
+      <h1>{recipe.recipe.label}</h1>
+      <img src={recipe.recipe.image} alt={recipe.recipe.label} ></img>
     </div>
   );
 };
