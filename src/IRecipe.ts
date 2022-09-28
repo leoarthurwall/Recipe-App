@@ -3,4 +3,7 @@ export interface IRecipe {
     image: string
     calories: string
     recipe: any
+    ingredientLines: string
+    totalTime: number
+    yield: 5
 }
