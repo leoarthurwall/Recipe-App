@@ -23,7 +23,8 @@ const App: React.FC = () => {
     const response = await fetch(apiRequest);
     const data = await response.json();
     setRecipesfound(data.hits);
-    console.log(recipesFound);
+    console.log("recipes.found", recipesFound);
+    console.log("data.hits", data.hits)
   };
   // saves written input to writtenIngredient state
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,9 +51,9 @@ const App: React.FC = () => {
       </form>
       {query && <p>Results for {query}...</p>}
       {recipesFound &&
-        recipesFound.map((recipe, index) => (
+        recipesFound.map((recipe, index)  => (
           <div key={index}>
-            <p>{recipe.label}</p>
+            <p>{recipe.recipe.label}</p>
             <p>hello</p>
           </div>
           // <Recipe key={recipe.calories} recipe={recipe}></Recipe>
