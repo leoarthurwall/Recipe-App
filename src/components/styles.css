@@ -1,0 +1,25 @@
+/* INPUT */
+
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 30px;
+
+   min-height: 300px;
+   max-width: 1000px;
+   background-color: aqua;
+}
+.input-form{
+    display: flex;
+    position: relative;
+}
+
+.input-box {
+    width: 70%;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 200;
+    padding: 10px;
+}
