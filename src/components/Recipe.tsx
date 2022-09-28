@@ -30,10 +30,12 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
           </ul>
         </div>
         <div className="recipe-right-lower">
-          <div className="recipe-time">
+        { recipe.recipe.totalTime > 0 && (<div className="recipe-time">
             <ClockIcon className="clock-icon" />
-            <p className="clock-icon-text">{recipe.recipe.totalTime}</p>
-          </div>
+            <p className="clock-icon-text">{recipe.recipe.totalTime} mins</p>
+          </div>)}
+          
+          
           <div className="recipe-yield">
             <UserIcon className="yield-icon" />
             <p className="yield-icon-text">{recipe.recipe.yield}</p>
