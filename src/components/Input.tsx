@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./Input.css";
 import {
   MagnifyingGlassIcon,
   ChevronRightIcon,
@@ -16,7 +16,7 @@ const Input: React.FC<Props> = ({ writtenIngredient, handleSubmit, handleChange 
     <div className="input-container">
       <header className="input-header">
         <ShoppingCartIcon className="shopping-icon"/>
-        <h3>Tell us what ingredients you need to use up</h3>
+        <h3 className="input-header-text">What ingredient do you need to use up?</h3>
       </header>
       <p className="input-para">
         Type an ingredient into the dropdown menu, and select a recipe you that
