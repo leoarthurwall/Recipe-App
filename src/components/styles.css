@@ -28,17 +28,19 @@
 .input-box {
   width: 100%;
   font-size: 14px;
-  font-style: italic;
   font-weight: 200;
+  color: #666;
   padding: 13px;
   font-size: 1rem;
   border: 1px solid #CCCBC8;
-  transition: 0.5s;
+  transition: 0.4s;
   outline: none;
-
+}
+.input-box::placeholder {
+    font-style: italic;
 }
 .input-box:focus {
-    box-shadow: 0 0 3px 3px #d0acff;
+    box-shadow: 0 0 1px 3px #d0acff;
     border: 1px solid var(--accent-color);
 
 }
