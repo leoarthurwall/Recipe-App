@@ -58,30 +58,19 @@
   list-style: none;
 }
 
-.recipe-time{
+.recipe-icon-box{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.2rem;
 }
-.recipe-yield{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
 
-}
 
-.clock-icon {
+.recipe-icon {
   height: 24px;
   width: 24px;
   left: -30px;
   color: var(--accent-color);
 }
 
-.yield-icon {
-    height: 24px;
-    width: 24px;
-    left: -30px;
-    color: var(--accent-color);
-  }
+

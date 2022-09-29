@@ -1,6 +1,6 @@
 import { IRecipe } from "../IRecipe";
 import "./Recipe.css";
-import { ClockIcon, UserIcon } from "@heroicons/react/24/solid";
+import { ClockIcon, FireIcon, UserIcon } from "@heroicons/react/24/solid";
 type Props = {
   recipe: IRecipe;
 };
@@ -30,14 +30,21 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
           </ul>
         </div>
         <div className="recipe-right-lower">
-        { recipe.recipe.totalTime > 0 && (<div className="recipe-time">
-            <ClockIcon className="clock-icon" />
-            <p className="clock-icon-text">{recipe.recipe.totalTime} mins</p>
-          </div>)}
-          
-          
-          <div className="recipe-yield">
-            <UserIcon className="yield-icon" />
+          <div className="recipe-icon-box">
+            <FireIcon className="recipe-icon" />
+            <p className="calorie-icon-text">
+              Total Kcal: {recipe.recipe.calories.toFixed()}
+            </p>
+          </div>
+          {recipe.recipe.totalTime > 0 && (
+            <div className="recipe-icon-box">
+              <ClockIcon className="recipe-icon" />
+              <p className="clock-icon-text">{recipe.recipe.totalTime} mins</p>
+            </div>
+          )}
+
+          <div className="recipe-icon-box">
+            <UserIcon className="recipe-icon" />
             <p className="yield-icon-text">Serves {recipe.recipe.yield}</p>
           </div>
         </div>
