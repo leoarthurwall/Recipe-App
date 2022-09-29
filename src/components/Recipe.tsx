@@ -9,7 +9,6 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
   let totalCalories = recipe.recipe.calories;
   let totalYield = recipe.recipe.yield;
   let servingCalories = totalCalories / totalYield;
-  console.log(servingCalories);
   return (
       
 

@@ -17,13 +17,13 @@ const App: React.FC = () => {
   const apiRequest = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}`;
 
   // saves written input to writtenIngredient state
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>):void => {
     console.log(event.target.value);
     setWrittenIngredient(event.target.value);
   };
 
   // when form is submitted, the query state is updated with the writtenIngredient state
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>):void => {
     event.preventDefault();
     setQuery(writtenIngredient);
     console.log(query);
@@ -36,7 +36,7 @@ const App: React.FC = () => {
   }, [query]);
 
   // does an async/ await fetch request to the API, adds the data to the recipesFound[] state
-  const getRecipes = async (): Promise<any> => {
+  const getRecipes = async (): Promise<void> => {
     const response = await fetch(apiRequest);
     const data = await response.json();
     setRecipesfound(data.hits);
@@ -44,6 +44,7 @@ const App: React.FC = () => {
     console.log("data.hits", data.hits);
   };
 
+  
   return (
     <div className="App">
       <Header />
