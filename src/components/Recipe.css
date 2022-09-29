@@ -9,6 +9,7 @@
 }
 .recipe-card:last-child {
   border-bottom: none;
+  margin-bottom: 0;
 }
 .recipe-image {
   width: 250px;

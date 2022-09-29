@@ -44,19 +44,21 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
-      <Input
-        writtenIngredient={writtenIngredient}
-        handleSubmit={handleSubmit}
-        handleChange={handleChange}
-      />
-      <div className="results-recipe-container">
-        <Results query={query} setQuery={setQuery} />
+    <div className="App-banner">
+      <div className="App-wrapper">
+        <Input
+          writtenIngredient={writtenIngredient}
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+        />
+        <div className="results-recipe-container">
+          <Results query={query} setQuery={setQuery} />
 
-        {recipesFound &&
-          recipesFound.map((recipe, index) => (
-            <Recipe key={index} recipe={recipe}></Recipe>
-          ))}
+          {recipesFound &&
+            recipesFound.map((recipe, index) => (
+              <Recipe key={index} recipe={recipe}></Recipe>
+            ))}
+        </div>
       </div>
     </div>
   );
