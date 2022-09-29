@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit&family=Prompt:wght@100;200;300;400;500;600;700&family=Roboto&display=swap");
 
-body{
-  background-color: #F5F5F5;
+body {
+  background-color: #f5f5f5;
   display: flex;
   justify-content: center;
   font-family: "Roboto", sans-serif;
-
 }
 
 :root {
-  --accent-color: #732AD8;
-  --font-text-color: #666
+  --accent-color: #732ad8;
+  --font-text-color: #666;
 }
 
 .App-wrapper {
@@ -19,7 +18,7 @@ body{
 }
 .App-banner {
   padding: 50px 15px 15px 15px;
-  background-color: #5B5B5B;
+  background-color: #5b5b5b;
   border-radius: 5px;
 }
 .results-recipe-container {
@@ -29,6 +28,5 @@ body{
 }
 .App {
   background-color: white;
-  padding: 150px 300px 100px 300px;
-
+  padding: 150px 200px 100px 200px;
 }
