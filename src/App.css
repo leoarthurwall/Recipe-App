@@ -20,6 +20,7 @@ body {
   padding: 50px 15px 15px 15px;
   background-color: #DAD8D3;
   border-radius: 5px;
+  width: fit-content;
 }
 .results-recipe-container {
   width: auto;

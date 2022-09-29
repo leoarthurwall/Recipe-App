@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Header from "./components/Header";
 import Input from "./components/Input";
 import Recipe from "./components/Recipe";
 import Results from "./components/Results";
@@ -45,6 +46,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+      <Header />
       <div className="App-banner">
         <div className="App-wrapper">
           <Input

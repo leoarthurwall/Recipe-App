@@ -1,0 +1,10 @@
+.header-container {
+    max-width: fit-content;
+    text-align: center;
+}
+.header-title {
+    color: var(--accent-color);
+}
+.header-para {
+    color: var(--font-text-color);
+}
