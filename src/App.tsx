@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Input from "./components/Input";
 import Recipe from "./components/Recipe";
+import Results from "./components/Results";
 import { IRecipe } from "./IRecipe";
 
 const App: React.FC = () => {
@@ -45,7 +46,8 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Input writtenIngredient={writtenIngredient} handleSubmit={handleSubmit} handleChange={handleChange} />
-      {query && <p>Results for {query}...</p>}
+      <Results query={query}/>
+     
       {recipesFound &&
         recipesFound.map((recipe, index) => (
           <Recipe key={index} recipe={recipe}></Recipe>
