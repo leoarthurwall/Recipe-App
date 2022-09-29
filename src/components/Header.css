@@ -4,7 +4,10 @@
 }
 .header-title {
     color: var(--accent-color);
+    font-size: 2.3rem;
 }
 .header-para {
     color: var(--font-text-color);
+    font-size: 1.1rem;
+    margin-bottom: 60px;
 }
