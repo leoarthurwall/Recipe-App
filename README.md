@@ -1,25 +1,47 @@
-# React and typescript Recipe finder
+# The Recipe finder
 
-## Plan Outline
+Do you have an ingredient you want to cook with, but are stuck for ideas? If so, put it into the recipe finder and you'll be spoit for choice. 
 
-- create a recipe suggester using react and typescript
-- search for an ingredient and then display results for all recipes that include the ingredient
-- use recipe API
+This app was developed using react & Typescript as a way of developoing Typescript skills.
 
-**Components**
-- search bar - do input boxes need to go into a form?
-- A Search button
-- A Recipe card - map through the recipes and display 10 random results e.g.
+![cover Image](Images/coverImage.png)
 
-**API**
-- Async & Await
--  API: EDAMAM
+## Functionality
 
-**Plan**
+This app takes advantage of the Edamam API. The current functionality is as follows:
 
-SEARCH COMPONENT
-- add an input field and button to jsx, wrap inside form DONE
-- add an onChange handler to record the input value and store it in state as a string
-- create an onSubmit handler to captures the onChange saved state & resets the onchange state back to ""
+- Search for a recipe by inputting an ingredient.
+- View Recipe suggestions: Name, ingredients, image, calories, cooking time, and servings.
+- Clicking on title or image will take you through to the recipe page for more details
+- Clear search
+- Scrollable ingredients section
+
+## Skills Learned and used
+
+**TypeScript**
+- types: used for passing props
+- interfaces: used for giving values to the data used from the API request
+- Assigning types to variables
+
+**React**
+- **Hooks** useState & useEffect
+- Passing Props
+- Seperating components
+- **Event Handlers**: onClick, onSubmit, onChange
+- Dynamic rendering
+- Async & Await API requests
+- Map() 
+- Conditional rendering
 
 
+**Styling**
+- CSS selectors: :focus :hover :last-child
+- Hero Icons
+- Google Fonts
+- **Scrolling Recipe List**: Overflow: auto
+- **CSS Variables**: accent color & text color
+
+## Future implementations
+
+- Refine search by entering more than one ingredient
+- Enter health requirements: vegan, gluten free, etc.

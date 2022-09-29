@@ -28,14 +28,10 @@
 .recipe-right-lower {
   display: flex;
   justify-content: end;
-  /* align-items:baseline; */
   gap: 1.5rem;
 }
 
-/* a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
-} */
+
 
 .recipe-link {
   text-decoration: none;
