@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Header from "./components/Header";
-import Input from "./components/Input";
-import Recipe from "./components/Recipe";
-import Results from "./components/Results";
+import Header from "./components/Header/Header";
+import Input from "./components/Input/Input";
+import Recipe from "./components/Recipe/Recipe";
+import Results from "./components/Results/Results";
 import { IRecipe } from "./IRecipe";
 
 const App: React.FC = () => {
@@ -59,8 +59,8 @@ const App: React.FC = () => {
             <Results query={query} setQuery={setQuery} />
 
             {recipesFound &&
-              recipesFound.map((recipe, index) => (
-                <Recipe key={index} recipe={recipe}></Recipe>
+              recipesFound.map((data, index) => (
+                <Recipe key={index} recipe={data.recipe}></Recipe>
               ))}
           </div>
         </div>
