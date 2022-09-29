@@ -1,4 +1,4 @@
-import { XMarkIcon } from "@heroicons/react/24/solid";
+import { XMarkIcon, ListBulletIcon} from "@heroicons/react/24/solid";
 import React from "react";
 import "./Results.css";
 
@@ -16,6 +16,7 @@ const Results: React.FC<Props> = ({ query, setQuery }) => {
     <>
       {query && (
         <div className="results-container">
+            <ListBulletIcon className="list-icon"/>
           <p className="results-for-text">Top Results for... </p>
           <button className="results-button">
             <XMarkIcon onClick={handleDelete} className="button-icon" />

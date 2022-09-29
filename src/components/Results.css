@@ -48,3 +48,9 @@
     font-weight: 600; 
     font-size: 1.1rem;
 }
+.list-icon{
+    height: 24px;
+    width: 24px;
+    color: var(--accent-color);
+    margin-right: 1rem;
+}
