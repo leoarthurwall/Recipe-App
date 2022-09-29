@@ -15,7 +15,7 @@ body{
 
 .App-wrapper {
   height: 100%;
-  max-width: 800px;
+  max-width: 1000px;
 }
 .App-banner {
   padding: 50px 15px 15px 15px;
@@ -27,4 +27,8 @@ body{
   background-color: white;
   padding: 0 40px;
 }
+.App {
+  background-color: white;
+  padding: 150px 300px 100px 300px;
 
+}
