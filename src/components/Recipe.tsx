@@ -6,6 +6,11 @@ type Props = {
 };
 
 const Recipe: React.FC<Props> = ({ recipe }) => {
+
+  let totalCalories = recipe.recipe.calories
+  let totalYield = recipe.recipe.yield
+  let servingCalories = totalCalories / totalYield
+  console.log(servingCalories)
   return (
     <div className="recipe-container">
       <div className="recipe-container-left">
@@ -33,7 +38,8 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
           <div className="recipe-icon-box">
             <FireIcon className="recipe-icon" />
             <p className="calorie-icon-text">
-              Total Kcal: {recipe.recipe.calories.toFixed()}
+               Calories: {servingCalories.toFixed()}
+
             </p>
           </div>
           {recipe.recipe.totalTime > 0 && (
