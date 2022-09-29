@@ -46,7 +46,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Input writtenIngredient={writtenIngredient} handleSubmit={handleSubmit} handleChange={handleChange} />
-      <Results query={query}/>
+      <Results query={query} setQuery={setQuery}/>
      
       {recipesFound &&
         recipesFound.map((recipe, index) => (

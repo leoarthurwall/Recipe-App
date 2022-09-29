@@ -4,14 +4,20 @@ import './Results.css'
 
 type Props = {
     query: string
+    setQuery: any // not specific
 }
 
-const Results:React.FC<Props> = ({query}) => {
+const Results:React.FC<Props> = ({query, setQuery}) => {
+
+   const handleDelete = () => {
+        setQuery("")
+    }
+
   return (
     <div className='results-container'>
          {query && <p className='results-for-text'>Results for... </p>}
          <button className='results-button'>
-         <XMarkIcon  className='button-icon'/>
+         <XMarkIcon onClick={handleDelete} className='button-icon'/>
             <p className='button-query'>{query} </p>
 
          </button>
