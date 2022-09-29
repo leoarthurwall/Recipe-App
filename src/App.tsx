@@ -26,7 +26,7 @@ const App: React.FC = () => {
     event.preventDefault();
     setQuery(writtenIngredient);
     console.log(query);
-    setWrittenIngredient("")
+    setWrittenIngredient("");
   };
 
   //when the query is updated, the useEffect calls the getRecipes api call function
@@ -45,13 +45,19 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Input writtenIngredient={writtenIngredient} handleSubmit={handleSubmit} handleChange={handleChange} />
-      <Results query={query} setQuery={setQuery}/>
-     
-      {recipesFound &&
-        recipesFound.map((recipe, index) => (
-          <Recipe key={index} recipe={recipe}></Recipe>
-        ))}
+      <Input
+        writtenIngredient={writtenIngredient}
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+      />
+      <div className="results-recipe-container">
+        <Results query={query} setQuery={setQuery} />
+
+        {recipesFound &&
+          recipesFound.map((recipe, index) => (
+            <Recipe key={index} recipe={recipe}></Recipe>
+          ))}
+      </div>
     </div>
   );
 };

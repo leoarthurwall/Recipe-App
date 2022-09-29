@@ -1,13 +1,13 @@
-.recipe-container {
+.recipe-card {
   display: flex;
   border-bottom: 2px solid #c5c5c5;
 
   width: auto;
-  padding: 40px 40px 20px 40px;
-  /* margin: 0 20px; */
+  padding-bottom: 20px;
+  margin-bottom: 40px;
   background-color: white;
 }
-.recipe-container:last-child {
+.recipe-card:last-child {
   border-bottom: none;
 }
 .recipe-image {
@@ -23,7 +23,6 @@
 .recipe-right-upper {
   display: flex;
   flex-direction: column;
-  
 }
 .recipe-right-lower {
   display: flex;
@@ -61,13 +60,12 @@
   list-style: none;
 }
 
-.recipe-icon-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
+.recipe-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
 }
-
 
 .recipe-icon {
   height: 24px;
@@ -75,5 +73,3 @@
   left: -30px;
   color: var(--accent-color);
 }
-
-

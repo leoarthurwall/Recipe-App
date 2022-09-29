@@ -16,7 +16,7 @@ const Results: React.FC<Props> = ({ query, setQuery }) => {
     <>
       {query && (
         <div className="results-container">
-          <p className="results-for-text">Results for... </p>
+          <p className="results-for-text">Top Results for... </p>
           <button className="results-button">
             <XMarkIcon onClick={handleDelete} className="button-icon" />
             <p className="button-query">{query} </p>

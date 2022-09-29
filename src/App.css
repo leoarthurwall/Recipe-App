@@ -19,4 +19,9 @@ body{
 
 }
 
+.results-recipe-container {
+  width: auto;
+  background-color: white;
+  padding: 0 40px;
+}
 

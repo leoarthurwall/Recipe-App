@@ -4,8 +4,9 @@
     width: auto;
     align-items: center;
     background-color: white;
-    padding: 30px 0 0 40px;
+    padding: 30px 0 ;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 .results-button{
     display: flex;
@@ -16,7 +17,7 @@
     padding: 8px 16px;
     gap: 0.7rem;
     border-radius: 25px;
-    border: 2px solid var(--accent-color);
+    border: 3px solid var(--accent-color);
     background-color: white;
     transition: 0.4s;
 
@@ -36,6 +37,7 @@
     margin: 0;
     color: var(--accent-color);
     font-weight: 600;
+    font-size: 1rem;
 }
 .button-query::first-letter{
     text-transform: capitalize;
@@ -44,4 +46,5 @@
 .results-for-text{
     margin: 0;
     font-weight: 600; 
+    font-size: 1.1rem;
 }
