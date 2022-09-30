@@ -62,7 +62,7 @@ const App: React.FC = () => {
 
             {recipesFound &&
               recipesFound.map((data, index) => (
-                <Recipe key={index} recipe={data.recipe}></Recipe>
+                <Recipe query={query} key={index} recipe={data.recipe}></Recipe>
               ))}
           </div>
         </div>

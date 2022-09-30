@@ -5,9 +5,10 @@ import RecipeRightUpper from "./RecipeRightUpper/RecipeRightUpper";
 type Props = {
   recipe: IRecipe;
   key: number;
+  query: string;
 };
 
-const Recipe: React.FC<Props> = ({ recipe }) => {
+const Recipe: React.FC<Props> = ({ recipe, query }) => {
   //
   const {url, label, ingredientLines, totalTime, image } = recipe
 
@@ -22,8 +23,8 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
   
 
   return (
-      
-
+      <>
+    {query && (
       <div className="recipe-card" >
         <div className="recipe-container-left">
           <a className="recipe-link" href={url} target="blank">
@@ -35,7 +36,10 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
           </a>
         </div>
         <RecipeRightUpper propYield={totalYield} propTime={totalTime} propIngredients={ingredientLines} propLabel={label} propUrl={url} calories={servingCalories.toFixed()}/>
-      </div>
+      </div> 
+    )}
+    </>
+      
   );
 };
 
