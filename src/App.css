@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit&family=Prompt:wght@100;200;300;400;500;600;700&family=Roboto&display=swap");
 
 body {
-  background-color: #F5F5F5;
+  background-color: white;
   display: flex;
   justify-content: center;
   font-family: "Roboto", sans-serif;
@@ -29,5 +29,5 @@ body {
 }
 .App {
   background-color: white;
-  padding: 150px 200px 100px 200px;
+  margin-top: 10vh;
 }
