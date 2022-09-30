@@ -32,8 +32,8 @@ const App: React.FC = () => {
 
   //when the query is updated, the useEffect calls the getRecipes api call function
   useEffect(() => {
-    // does an async/ await fetch request to the API, adds the data to the recipesFound[] state
     const getRecipes = async (): Promise<void> => {
+      // does an async/ await fetch request to the API, adds the data to the recipesFound[] state
       try {
         const response = await fetch(apiRequest);
         const data = await response.json();

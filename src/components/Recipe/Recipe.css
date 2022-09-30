@@ -27,11 +27,9 @@
 }
 .recipe-right-lower {
   display: flex;
-  justify-content: end;
+  flex-flow: row-reverse;
   gap: 1.5rem;
 }
-
-
 
 .recipe-link {
   text-decoration: none;
