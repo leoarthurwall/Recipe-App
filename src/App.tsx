@@ -9,7 +9,7 @@ import { IRecipe } from "./IRecipe";
 const App: React.FC = () => {
   const [writtenIngredient, setWrittenIngredient] = useState<string>("");
   const [recipesFound, setRecipesfound] = useState<IRecipe[]>([]);
-  const [query, setQuery] = useState<string>("pasta");
+  const [query, setQuery] = useState<string>("Suggestions");
 
   const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
   const API_ID = process.env.REACT_APP_RECIPE_API_ID;
