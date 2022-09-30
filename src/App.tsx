@@ -14,7 +14,7 @@ const App: React.FC = () => {
   const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
   const API_ID = process.env.REACT_APP_RECIPE_API_ID;
 
-  const apiRequest = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}`;
+  const apiRequest = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}&ingr=6&random=true`;
 
   // saves written input to writtenIngredient state
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
