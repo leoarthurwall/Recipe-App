@@ -35,7 +35,10 @@ const App: React.FC = () => {
     const getRecipes = async (): Promise<void> => {
       // does an async/ await fetch request to the API, adds the data to the recipesFound[] state
       try {
-        const response = await fetch(apiRequest);
+        const response = await fetch(apiRequest, {
+          method: "Get",
+          redirect: "follow"
+        });
         const data = await response.json();
 
         setRecipesfound(data.hits);
