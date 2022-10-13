@@ -1,6 +1,6 @@
 # The Recipe finder
 
-Do you have an ingredient you want to cook with, but are stuck for ideas? If so, put it into the recipe finder and you'll be spoit for choice. 
+Do you have an ingredient you want to cook with, but are stuck for ideas? If so, put it into the recipe finder and you'll be spoilt for choice. 
 
 This app was developed using react & Typescript as a way of developoing Typescript skills.
 
