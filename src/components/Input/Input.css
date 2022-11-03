@@ -77,3 +77,9 @@
    font-size: 1.1rem;
    width: 100%;
 }
+
+@media only screen and (max-width: 480px) {
+  .input-container {
+    padding: 50px 40px 50px 40px;
+  }
+}
