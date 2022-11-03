@@ -1,5 +1,7 @@
 .recipe-card {
   display: flex;
+  flex-direction: row;
+
   border-bottom: 2px solid #c5c5c5;
 
   width: auto;
@@ -7,6 +9,7 @@
   margin-bottom: 40px;
   background-color: white;
 }
+
 .recipe-card:last-child {
   border-bottom: none;
   margin-bottom: 0;
@@ -67,4 +70,10 @@
   width: 24px;
   left: -30px;
   color: var(--accent-color);
+}
+
+@media only screen and (max-width: 480px) {
+  .recipe-card {
+    flex-direction: column;
+  }
 }
