@@ -80,6 +80,7 @@
 @media only screen and (max-width: 480px) {
   .recipe-card {
     flex-direction: column;
+    gap: 1rem;
   }
   .recipe-container-left {
     justify-content: center;
