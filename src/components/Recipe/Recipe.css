@@ -91,4 +91,8 @@
     padding-left: 0;
    ;
   }
+  .recipe-right-lower {
+    flex-flow: row;
+    gap: 0.5rem;
+}
 }
