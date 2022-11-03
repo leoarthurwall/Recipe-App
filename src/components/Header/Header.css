@@ -16,4 +16,7 @@
     .header-container {
         padding: 0 40px;
     }
+    .header-title {
+        font-size: 2rem;
+    }
   }
