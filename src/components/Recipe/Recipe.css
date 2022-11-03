@@ -84,4 +84,7 @@
   .recipe-container-left {
     justify-content: center;
   }
+  .recipe-image {
+    width: 100%;
+  }
 }
