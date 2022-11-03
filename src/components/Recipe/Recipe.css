@@ -87,4 +87,8 @@
   .recipe-image {
     width: 100%;
   }
+  .recipe-container-right {
+    padding-left: 0;
+   ;
+  }
 }
